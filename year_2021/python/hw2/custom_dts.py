@@ -221,7 +221,7 @@ class PersistentList:
                 [1, 2, 3] -> delete(4) -> [1, 3]
             if index lower then delete from end of list
         """
-        if len(self.iterable) < index+1:
+        if len(self.iterable) < abs(index)+1:
             index = index%len(self.iterable)
             self.iterable.pop(index)
         else:
